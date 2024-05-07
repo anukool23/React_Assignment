@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+</body>
+<script>
+    const root = document.getElementById('root')
+    const list = document.createElement("ul");
+    list.textContent = "Favourites movies";
+
+    const data1=document.createElement("li");
+    data1.textContent="The Godfather";
+
+    const data2=document.createElement("li");
+    data2.textContent="Avengers: Endgame";
+
+    const data3=document.createElement("li");
+    data3.textContent="The Shawshank Redemption";
+
+    list.append(data1,data2,data3);
+    root.appendChild(list);
+</script>
+</html>

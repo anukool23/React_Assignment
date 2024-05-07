@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banner Example</title>
+<style>
+    /* Some basic styling for the banner */
+    .banner {
+        background-color: #007bff; /* Blue color, you can change it */
+        color: #fff; /* White text */
+        padding: 10px; /* Padding around the banner */
+        text-align: center; /* Center align text */
+    }
+</style>
+</head>
+<body>
+
+<!-- Your HTML content -->
+<h1>Welcome to my page</h1>
+<p>This is some content.</p>
+
+<!-- JavaScript to create and append the banner -->
+<script>
+    // Create a banner element
+    var banner = document.createElement('div');
+    banner.className = 'banner';
+    banner.innerHTML = '<strong>This is a banner</strong>'; // Text inside the banner, you can customize it
+
+    // Append the banner to the body of the document
+    document.body.appendChild(banner);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JSX and Babel</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const root = document.getElementById("root");
+      var theme = 'dark';
+      var darkText = "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...";
+      var lightText =  "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...";
+        const App = () => {
+            if(theme === 'dark'){
+                return(
+            <div>
+              <p style={{color: 'white'},{backgroundColor: 'black'}}>{theme === 'dark' ? darkText : lightText}</p>
+            </div>
+          );
+        }
+    }
+        ReactDOM.createRoot(root).render(<App />);
+
+
+       /*
+        Text : "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+        Task 1 : 1. Render this text, black background, white color, font size should be 48px
+        Task 2 : 1. Add a variable in your application called theme. value can be "dark", "light" 2. By default dark theme. when change to light, it should be reverse ( light theme = white background, dark color ) 3. Text should be "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..." if it is light theme
+        */
+    </script>
+  </body>
+</html>

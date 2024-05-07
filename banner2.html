@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popup Banner Example</title>
+<style>
+    /* Styles for the overlay */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+        display: none; /* Hidden by default */
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Styles for the popup */
+    .popup {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<!-- Your HTML content -->
+<h1>Welcome to my page</h1>
+<p>This is some content.</p>
+
+<!-- Popup Banner HTML -->
+<div class="overlay" id="overlay">
+    <div class="popup">
+        <h2>Happy Holi</h2>
+        <p>Welcome to Anukool Community</p>
+        <img src="holi2.gif" alt="Holi GIF">
+        <button onclick="closePopup()" style="margin: 0 auto; display: block; background-color: green; color: white; border-radius: 0.5rem;">Close</button>
+    </div>
+</div>
+
+<!-- JavaScript to control the popup -->
+<script>
+    // Function to open the popup
+    function openPopup() {
+        document.getElementById("overlay").style.display = "flex";
+    }
+
+    // Function to close the popup
+    function closePopup() {
+        document.getElementById("overlay").style.display = "none";
+    }
+
+    // Automatically open the popup when the page loads (optional)
+    window.onload = function() {
+        openPopup();
+    };
+</script>
+
+</body>
+</html>
